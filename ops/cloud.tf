@@ -55,7 +55,7 @@ EOF
 
 resource "aws_cloudwatch_event_rule" "inovespa_schedule" {
   name                = "inovespa-event-rule"
-  schedule_expression = "cron(0 13 ? * 1-5 *)"
+  schedule_expression = "cron(0 16 ? * MON-FRI *)"
 }
 
 resource "aws_cloudwatch_event_target" "cloudwatch_lambda_target" {
